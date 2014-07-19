@@ -17,6 +17,8 @@ GEM
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
     rake (10.3.2)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
@@ -43,6 +45,7 @@ PLATFORMS
 
 DEPENDENCIES
   neography
+  rack-test
   rspec
   rspec-mocks
   sinatra

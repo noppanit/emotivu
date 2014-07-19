@@ -8,4 +8,5 @@ gem 'neography'
 group :development, :test do
 	gem 'rspec'
 	gem 'rspec-mocks'
+	gem 'rack-test'
 end
