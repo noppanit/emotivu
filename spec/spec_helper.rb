@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler'
-
+require 'pp'
 Bundler.require
 
 require 'rspec'
