@@ -1,0 +1,11 @@
+{
+    "emotivu": {
+        "name": "Emotivu v1 API",
+        "protocol": "http",
+        "baseURL": "localhost:9292",
+        "publicPath": "/",
+        "headers" : {},
+        "auth": "key",
+        "keyParam": "key"
+    }
+}

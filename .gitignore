@@ -1,3 +1,4 @@
 .DS_Store
 neo4j-dev/data/*
 *.log
+iodocs/node_modules

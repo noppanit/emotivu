@@ -18,10 +18,9 @@ describe MovieFinder do
         it 'should give me movies based on similarity' do
             movies = @movie_finder.find_by_similarity('Arnold')
             expect(movies.size).to eql 2
-
         end
     end
-    
+
     after(:each) do
         delete_elasticsearch_index
         delete_all_nodes

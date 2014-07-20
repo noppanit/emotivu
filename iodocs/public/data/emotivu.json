@@ -1,0 +1,21 @@
+{
+   "endpoints":[
+      {
+         "name":"Suggestion",
+         "methods":[
+            {
+               "MethodName":"Get movies suggestion",
+               "Synopsis":"This method allows you to get movie suggestions",
+               "HTTPMethod":"POST",
+               "URI":"/suggestion",
+               "RequiresOAuth":"N",
+               "parameters":[
+                  {
+                     "text":"text"
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

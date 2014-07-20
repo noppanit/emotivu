@@ -17,7 +17,7 @@ RSpec.configure do |conf|
 end
 
 def delete_all_nodes
-    delete_query = 'START n = node(*) WITH n OPTIONAL MATCH n-[r]-() DELETE n, r;'
+    delete_query = 'START n0=node(0),nx=node(*) MATCH n0-[r0]-(),nx-[rx]-() WHERE nx <> n0 DELETE r0,rx,nx'
     $neo_server.execute_query(delete_query)
 end
 
