@@ -3,7 +3,9 @@ source "https://rubygems.org"
 
 gem 'sinatra'
 gem 'neography'
-gem 'tire'
+gem 'elasticsearch'
+gem 'json'
+gem 'hashie'
 
 group :development, :test do
 	gem 'rspec'

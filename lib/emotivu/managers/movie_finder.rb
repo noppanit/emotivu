@@ -1,4 +1,4 @@
-class MovieManager
+class MovieFinder
     def initialize
     end
 
@@ -7,5 +7,13 @@ class MovieManager
         movie_properties = $neo_server.get_node_properties(found_movie_node)
 
         Movie.new(movie_properties)
+    end
+
+    def find_by_similarity(text)
+        response = $elasticsearch.search index: $elasticsearch_index, q: text
+        response = Hashie::Mash.new response
+
+        return response.hits.hits.map{|movie| find_by_id(movie._id)}
+
     end
 end
