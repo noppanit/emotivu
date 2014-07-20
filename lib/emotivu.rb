@@ -25,4 +25,4 @@ end
 $neo_server = Neography::Rest.new
 
 require 'emotivu/models/movie'
-require 'emotivu/managers/movie_manager'
+require 'emotivu/managers/movie_finder'

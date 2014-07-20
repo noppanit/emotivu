@@ -15,11 +15,11 @@ describe Movie do
         end
 
         it 'should have name Terminator 2' do
-            expect(@found_movie.name).to eql "Terminator 2"
+            expect(@found_movie.properties['name']).to eql "Terminator 2"
         end
 
         it 'should have movie id' do
-            expect(@found_movie.movie_id).to eql @movie_id
+            expect(@found_movie.properties['movie_id']).to eql @movie_id
         end
 
     end
