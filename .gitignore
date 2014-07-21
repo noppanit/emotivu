@@ -2,3 +2,4 @@
 neo4j-dev/data/*
 *.log
 iodocs/node_modules
+iodocs/dump.rdb
