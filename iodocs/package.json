@@ -25,7 +25,7 @@
   "dependencies": {
     "clone": "0.1.1",
     "connect-redis": "1.0.6",
-    "express": "3.3.1",
+    "express": "4.17.1",
     "jade": "0.32.0",
     "node-json-minify": ">= 0.1.x",
     "oauth": "0.9.10",
