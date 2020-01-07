@@ -7,26 +7,29 @@ describe Movie do
     end
 
     context 'when creating a new movie' do
+        subject { MovieFinder.new.find_by_id(@movie_id).properties }
         before(:each) do
-            movie_node = Movie.new({name: 'Terminator 2', description: 'Arnold'})
+            movie_node = Movie.new({
+                name: 'Terminator 2',
+                description: 'Arnold',
+                itune_desc: 'itune description',
+                other_desc: 'other description',
+                initial_release_date: '2014-10-10',
+                youtube_ids: ['youtube_id']
+                })
             @movie_id = movie_node.create
-            movie_manager = MovieFinder.new
 
-            @found_movie = movie_manager.find_by_id(@movie_id)
         end
 
-        it 'should have name Terminator 2' do
-            expect(@found_movie.properties['name']).to eql "Terminator 2"
-        end
+        # ,tags,poster,track_view_url,genres
 
-        it 'should have movie id' do
-            expect(@found_movie.properties['movie_id']).to eql @movie_id
-        end
-
-        it 'should have description Arnold' do
-            expect(@found_movie.properties['description']).to eql 'Arnold'
-        end
-
+        its(['movie_id']) { should eq @movie_id }
+        its(['name']) { should eq 'Terminator 2' }
+        its(['description']) { should eq 'Arnold' }
+        its(['itune_desc']) { should eq 'itune description' }
+        its(['other_desc']) { should eq 'other description'}
+        its(['initial_release_date']) { should eq '2014-10-10'}
+        its(['youtube_ids']) { should eq ['youtube_id']}
     end
 
     after(:each) do

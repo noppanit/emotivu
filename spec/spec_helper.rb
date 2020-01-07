@@ -10,6 +10,7 @@ require File.join(File.dirname(__FILE__), '..', "/lib/emotivu")
 require File.join(File.dirname(__FILE__), '..', "/server")
 
 require 'rspec'
+require 'rspec/its'
 require 'rack/test'
 
 RSpec.configure do |conf|
@@ -17,7 +18,7 @@ RSpec.configure do |conf|
 end
 
 def delete_all_nodes
-    delete_query = 'START n0=node(0),nx=node(*) MATCH n0-[r0]-(),nx-[rx]-() WHERE nx <> n0 DELETE r0,rx,nx'
+    delete_query = 'START n = node(*) WITH n OPTIONAL MATCH n-[r]-() DELETE n, r;'
     $neo_server.execute_query(delete_query)
 end
 

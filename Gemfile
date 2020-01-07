@@ -11,4 +11,5 @@ group :development, :test do
 	gem 'rspec'
 	gem 'rspec-mocks'
 	gem 'rack-test'
+	gem 'rspec-its'
 end
